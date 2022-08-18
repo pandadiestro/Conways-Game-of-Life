@@ -1,7 +1,5 @@
 #include <iostream>
 #include <conio.h>
-#include <thread>
-#include <chrono>
 
 
 #define cell (char)254
@@ -36,11 +34,11 @@ int main(){
 	
 	showarr(map, 10, 10);
 
-	this_thread::sleep_for(chrono::seconds(1));	
+	getch();
 	
 	system("cls");
 	
-	while(true){
+	while(true){	
 		for(int i = 0; i<10; i++){
 			for(int j = 0; j<10; j++){				
 				if(vida(map, i, j)){
@@ -59,8 +57,8 @@ int main(){
 		
 		showarr(mapcop, 10, 10);
 		
-		this_thread::sleep_for(chrono::seconds(1));
-						
+		getch();
+				
 		for(int i = 0; i<10; i++){
 			for(int j = 0; j<10; j++){
 				map[i][j]=mapcop[i][j];
@@ -68,7 +66,6 @@ int main(){
 		}
 		
 		system("cls");
-		
 	}
 	return 0;
 }
@@ -127,10 +124,3 @@ void showarr(char arr[][10], int n, int m){
 	}
 	
 }
-
-
-
-
-
-
-
